@@ -1728,7 +1728,7 @@ GameObject:
   - component: {fileID: 1572776109}
   - component: {fileID: 1572776108}
   m_Layer: 0
-  m_Name: PlayerIdle1
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1746,6 +1746,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4f23edae47ae0045aa9d5b630c18384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  groundCheckRadius: 0.02
+  isGrounded: 0
 --- !u!61 &1572776109
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1883,7 +1885,7 @@ Transform:
   m_GameObject: {fileID: 1572776107}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.02, y: -1.91, z: 0}
+  m_LocalPosition: {x: 0.02, y: -1.972, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1915,8 +1917,8 @@ Transform:
   m_GameObject: {fileID: 1714888980}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.85, y: -3.46, z: 0}
-  m_LocalScale: {x: 1.0354, y: 1.0354, z: 1.0354}
+  m_LocalPosition: {x: 0.85, y: -3.029, z: 0}
+  m_LocalScale: {x: 22.105791, y: 1.0354, z: 1.0354}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1975747446}
