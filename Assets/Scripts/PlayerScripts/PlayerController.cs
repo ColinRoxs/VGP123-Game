@@ -1,6 +1,7 @@
 using UnityEngine;
 
 [RequireComponent (typeof(Rigidbody2D), typeof(SpriteRenderer), typeof(Collider2D))]
+[RequireComponent(typeof(Animator))]
 
 public class NewMonoBehaviourScript : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
     private Rigidbody2D rb;
     private SpriteRenderer sr;
     private Collider2D col;
+    private Animator anim;
 
     private LayerMask groundLayer;
     [SerializeField] private bool isGrounded = false;
@@ -33,6 +35,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         col = GetComponent<Collider2D>();
+        anim = GetComponent<Animator>();
 
         groundLayer = LayerMask.GetMask("GroundColliderLayer");
 
@@ -67,6 +70,10 @@ public class NewMonoBehaviourScript : MonoBehaviour
         {
             jumpCount = 0;
         }
+
+        //Update animations
+        anim.SetFloat("hValue", Mathf.Abs(hValue));
+        anim.SetBool("Grounded", isGrounded = true);
     }
 
     void SpriteFlip(float hValue) //Sprite flipper, might make redundant or modify to make sprite flip to mouse cursor.
