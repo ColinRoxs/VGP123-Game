@@ -770,7 +770,7 @@ GameObject:
   - component: {fileID: 1512177496}
   - component: {fileID: 1512177495}
   - component: {fileID: 1512177494}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TestingLevel-Stage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8403,7 +8403,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
