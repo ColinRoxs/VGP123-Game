@@ -62,7 +62,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && jumpCount < maxJumpCount)
         {
-            rb.AddForce(Vector2.up * 7f, ForceMode2D.Impulse); //Adjust force as necessary
+            rb.AddForce(Vector2.up * 10f, ForceMode2D.Impulse); //Adjust force as necessary
             jumpCount++;
         }
         isGrounded = Physics2D.OverlapCircle(groundCheckPos, groundCheckRadius, groundLayer);
