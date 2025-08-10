@@ -74,6 +74,8 @@ public class NewMonoBehaviourScript : MonoBehaviour
         //Update animations
         anim.SetFloat("hValue", Mathf.Abs(hValue));
         anim.SetBool("Grounded", isGrounded = true);
+
+
     }
 
     void SpriteFlip(float hValue) //Sprite flipper, might make redundant or modify to make sprite flip to mouse cursor.
