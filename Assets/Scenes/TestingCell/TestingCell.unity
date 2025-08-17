@@ -14789,6 +14789,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1197338242573768626, guid: 5888466b35a88c54a8825e30c8b6649d, type: 3}
+      propertyPath: ChestLow
+      value: 
+      objectReference: {fileID: 6616573873088033326, guid: 19f3af2c807213e48889b99df0b8b91a, type: 3}
     - target: {fileID: 7073107555424176566, guid: 5888466b35a88c54a8825e30c8b6649d, type: 3}
       propertyPath: m_Name
       value: RNGObjectSpawner
