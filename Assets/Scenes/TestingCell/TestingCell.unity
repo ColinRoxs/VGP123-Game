@@ -14785,16 +14785,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1572776112}
     - target: {fileID: 5156286724721730341, guid: ee5678c9ed1cb294ea2bc8b71f4b2198, type: 3}
+      propertyPath: damping
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5156286724721730341, guid: ee5678c9ed1cb294ea2bc8b71f4b2198, type: 3}
       propertyPath: maxSpeed
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5156286724721730341, guid: ee5678c9ed1cb294ea2bc8b71f4b2198, type: 3}
       propertyPath: baseSpeed
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5156286724721730341, guid: ee5678c9ed1cb294ea2bc8b71f4b2198, type: 3}
       propertyPath: aimShiftStrength
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

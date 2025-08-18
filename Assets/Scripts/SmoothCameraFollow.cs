@@ -24,8 +24,13 @@ public class SmoothCameraFollow : MonoBehaviour
 
         if (Input.GetMouseButton(1))
         {
-            Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            mouseWorldPos.z = transform.position.z;
+            //Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            //mouseWorldPos.z = transform.position.z;
+            Vector3 mouseScreenPos = Input.mousePosition;
+            mouseScreenPos.z = Camera.main.transform.position.z * -1f; // Convert camera depth to positive distance
+
+            Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(mouseScreenPos);
+            mouseWorldPos.z = target.position.z; // Lock Z for 2D
 
             Vector3 aimDirection = (mouseWorldPos - target.position).normalized;
             Vector3 aimShift = aimDirection * aimShiftStrength;
