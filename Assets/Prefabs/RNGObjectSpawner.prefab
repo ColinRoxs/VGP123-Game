@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7507318604854482325}
   - component: {fileID: 5028786259132385859}
   - component: {fileID: 1197338242573768626}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RNGObjectSpawner
   m_TagString: RNGObjectSpawn1
   m_Icon: {fileID: 0}

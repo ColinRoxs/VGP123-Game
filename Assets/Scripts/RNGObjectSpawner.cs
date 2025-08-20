@@ -13,6 +13,12 @@ public class RNGObjectSpawner : MonoBehaviour
         int myRandomInt = Random.Range(1, 3);
         RNG = myRandomInt;
 
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        if (spriteRenderer != null)
+        {
+            spriteRenderer.enabled = false;
+        }
+
         if (RNG == 1)
         {
             Instantiate(ChestLow, transform.position,transform.rotation);
@@ -35,10 +41,5 @@ public class RNGObjectSpawner : MonoBehaviour
     void Update()
     {
         
-    }
-
-    void ChestGen()
-    {
-
     }
 }

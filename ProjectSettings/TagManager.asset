@@ -12,8 +12,8 @@ TagManager:
   - GroundColliderLayer
   - Water
   - UI
-  - 
-  - 
+  - RNGObjectSpawners
+  - RNGObjectsLayer
   - 
   - 
   - 
