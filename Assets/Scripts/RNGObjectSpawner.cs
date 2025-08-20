@@ -10,7 +10,7 @@ public class RNGObjectSpawner : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        int myRandomInt = Random.Range(1, 6);
+        int myRandomInt = Random.Range(1, 3);
         RNG = myRandomInt;
 
         if (RNG == 1)

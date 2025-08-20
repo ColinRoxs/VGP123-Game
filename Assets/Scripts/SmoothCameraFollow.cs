@@ -13,6 +13,15 @@ public class SmoothCameraFollow : MonoBehaviour
 
     private Vector3 vel = Vector3.zero;
 
+    private void Start()
+    {
+        SpriteRenderer sr = target.GetComponent<SpriteRenderer>();
+        if (sr != null)
+        {
+            offset.y = sr.bounds.size.y / 2f;
+        }
+    }
+
     private void FixedUpdate()
     {
         if (target == null) return;
