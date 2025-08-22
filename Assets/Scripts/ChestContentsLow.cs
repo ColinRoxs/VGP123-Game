@@ -20,7 +20,7 @@ public class ChestContentsLow : MonoBehaviour
         
     }
 
-    void ChestOpen()
+    public void ChestOpen()
     {
         if (RNG == 1)
         {
