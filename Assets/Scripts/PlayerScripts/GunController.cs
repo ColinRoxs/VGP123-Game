@@ -25,10 +25,10 @@ public class GunController : MonoBehaviour
 
         GameObject projectile = Instantiate(projectilePrefab, barrelTransform.position, barrelTransform.rotation);
 
-        Rigidbody rb = projectile.GetComponent<Rigidbody>();
-        if (rb != null )
-        {
-            rb.linearVelocity = barrelTransform.right * projectileSpeed;
-        }
+        //Rigidbody rb = projectile.GetComponent<Rigidbody>();
+        //if (rb != null )
+        //{
+        //    rb.linearVelocity = barrelTransform.right * projectileSpeed;
+        //}
     }
 }
