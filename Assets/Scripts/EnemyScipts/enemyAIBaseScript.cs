@@ -46,15 +46,24 @@ public class enemyAIBaseScript : MonoBehaviour
         // Flip sprite based on direction
         sr.flipX = deltaX < 0;
 
-        // Move only in X direction using linearVelocityX
-        if (absX > stopDistance)
+        if(absX < stopDistance)
         {
-            rb.linearVelocityX = Mathf.Sign(deltaX) * moveSpeed;
+            rb.linearVelocityX = -Mathf.Sign(deltaX) * moveSpeed;
         }
         else
         {
-            rb.linearVelocityX = 0f;
+            rb.linearVelocityX = Mathf.Sign(deltaX) * moveSpeed;
         }
+
+        // Move only in X direction using linearVelocityX
+        //if (absX > stopDistance)
+        //{
+        //    rb.linearVelocityX = Mathf.Sign(deltaX) * moveSpeed;
+        //}
+        //else
+        //{
+        //    rb.linearVelocityX = 0f;
+        //}
 
         stopDistance = isMelee ? 2f : 10f;
 
