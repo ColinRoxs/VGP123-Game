@@ -53,6 +53,7 @@ public class enemyAIBaseScript : MonoBehaviour
         float moveThresholdMin = stopDistance - bufferZone;
         float moveThresholdMax = stopDistance + bufferZone;
 
+        //Makes the enemy try and be at their stopDistance to the player
         if(absX < moveThresholdMin)
         {
             rb.linearVelocityX = -Mathf.Sign(deltaX) * moveSpeed;
@@ -66,19 +67,8 @@ public class enemyAIBaseScript : MonoBehaviour
             rb.linearVelocityX = 0f;
         }
 
-            // Move only in X direction using linearVelocityX
-            //if (absX > stopDistance)
-            //{
-            //    rb.linearVelocityX = Mathf.Sign(deltaX) * moveSpeed;
-            //}
-            //else
-            //{
-            //    rb.linearVelocityX = 0f;
-            //}
-
-
-
-            stopDistance = isMelee ? 2f : 10f;
+        //Testing for enemies at different stopDistances
+        stopDistance = isMelee ? 2f : 10f;
 
         Debug.Log($"{gameObject.name} isMelee: {isMelee}, stopDistance set to: {stopDistance}");
     }
