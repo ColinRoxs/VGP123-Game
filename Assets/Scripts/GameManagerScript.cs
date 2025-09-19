@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class GameManager : MonoBehaviour
     public int PlayerJumps = 0; //Double Jump Count
 
     public string currentLevelName = "TestingCell";
+
+    private bool isPaused = false;
 
     private void Start()
     {
@@ -33,6 +36,11 @@ public class GameManager : MonoBehaviour
         if (playerHealth > playerMaxHealth)
         {
             playerHealth = playerMaxHealth;
+        }
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            TogglePause();
         }
     }
 
@@ -79,5 +87,11 @@ public class GameManager : MonoBehaviour
     public void OnQuitGame()
     {
         Application.Quit();
+    }
+
+    public void TogglePause()
+    {
+        isPaused = !isPaused;
+        Time.timeScale = isPaused ? 0f : 1f;
     }
 }
