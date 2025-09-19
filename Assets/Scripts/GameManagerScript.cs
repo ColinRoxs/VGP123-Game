@@ -6,12 +6,35 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     // Multipliers for player stats
-    public int playerHealth = 0; //Health
+    public int playerHealth = 100; //Health
+    public int playerMaxHealth = 100;
     public int PlayerSpeed = 0; //Move Speed
     public int PlayerHaste = 0; //Attack Speed
     public int PlayerMight = 0; //Damage
     public int PlayerJumps = 0; //Double Jump Count
-    public string currentLevelName = "";
+
+    public string currentLevelName = "TestingCell";
+
+    private void Start()
+    {
+        if (SceneManager.GetActiveScene().name == "BootScene")
+        {
+            SceneManager.LoadScene("Main Menu");
+        }
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape) && SceneManager.GetActiveScene().name != "Main Menu")
+        {
+            SceneManager.LoadScene("Main Menu");
+        }
+
+        if (playerHealth > playerMaxHealth)
+        {
+            playerHealth = playerMaxHealth;
+        }
+    }
 
     private void Awake()
     {
@@ -50,6 +73,11 @@ public class GameManager : MonoBehaviour
     public void ResetGameData()
     {
         playerHealth = 0;
-        currentLevelName = "";
+        currentLevelName = "TestingCell";
+    }
+
+    public void OnQuitGame()
+    {
+        Application.Quit();
     }
 }

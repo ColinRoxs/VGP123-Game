@@ -7,6 +7,7 @@ TagManager:
   - RNGObjectSpawn1
   - Enemy
   - Ground
+  - EnemyAttack
   layers:
   - Default
   - TransparentFX
