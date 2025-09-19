@@ -703,6 +703,8 @@ MonoBehaviour:
   projectilePrefab: {fileID: 0}
   barrelTransform: {fileID: 0}
   projectileSpeed: 20
+  shootSound: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!1 &589224972
 GameObject:
   m_ObjectHideFlags: 0
@@ -15375,7 +15377,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 1536791476263563667, guid: 6d674c099758da941ad02a729cfc28fe, type: 3}
   barrelTransform: {fileID: 308997737}
-  projectileSpeed: 20
+  projectileSpeed: 40
+  shootSound: {fileID: 8300000, guid: cd308aeb57b5d964a99a5784d624aabe, type: 3}
+  audioSource: {fileID: 0}
 --- !u!1 &1736517146 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2089943676907458501, guid: dece99e4dcb1c8c46b5522239f0b8db6, type: 3}
@@ -15505,6 +15509,8 @@ MonoBehaviour:
   projectilePrefab: {fileID: 0}
   barrelTransform: {fileID: 0}
   projectileSpeed: 20
+  shootSound: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!1 &1975747445
 GameObject:
   m_ObjectHideFlags: 0
